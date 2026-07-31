@@ -1,0 +1,110 @@
+PHASE 1 - PROJECT PROPOSAL (English)
+Deadline: 01/08/2026
+
+==================================================
+
+1. PROJECT TITLE
+
+Online Judge - Problem Solving Platform
+
+==================================================
+
+2. PROJECT DESCRIPTION
+
+An Online Judge is a system where users can solve programming
+problems and submit their Java solutions to be tested automatically.
+
+- What is the system?
+  A platform that presents programming problems and automatically
+  compiles, runs, and grades the Java solutions submitted by users.
+
+- What problem does it solve?
+  It removes the need for a teacher or examiner to manually check
+  every solution. The system runs the submitted code against
+  predefined test cases and gives an instant verdict
+  (Accepted, Wrong Answer, Runtime Error, Compilation Error).
+
+- Who uses it?
+  Students (solve problems and earn points) and an Admin
+  (manage users and monitor the system).
+
+==================================================
+
+3. MAIN FEATURES
+
+- Login (Users and Admin)
+- Admin: Add / Update / Remove Users
+- View problems and select one to solve
+- Submit a Java solution file
+- Automatic compilation of the submitted code
+- Run code against test cases (Accepted / Wrong Answer / Runtime Error)
+- Score system (earn points when a problem is solved)
+- Scoreboard showing all users with their scores
+- Refresh Score
+- Logout / Exit
+
+==================================================
+
+4. SCREENS (Minimum 8 Screens)
+
+1. Login
+2. Admin Dashboard
+3. User Dashboard
+4. User Management (Add / Update / Remove Users)
+5. Problems List
+6. Submit Solution (file chooser)
+7. Scores / Leaderboard
+8. Result Dialog (Accepted / Wrong Answer / Runtime Error / Compilation Error)
+
+==================================================
+
+5. DATABASE TABLES (Minimum 3 Tables)
+
+Table: users
+- user_id
+- username
+- password
+- score
+- role
+
+Table: problems
+- problem_id
+- title
+- points
+
+Table: submissions
+- submission_id
+- code
+- language
+- submitted_at
+- verdict
+- user_id
+- problem_id
+
+==================================================
+
+6. SYSTEM DIAGRAM (Flowchart)
+
+Login
+  |
+  v
+Dashboard
+  |
+  +-- Admin: User Management
+  |
+  +-- User: Choose Problem -> Submit Solution -> Compile -> Test -> Verdict
+  |
+  +-- Scores / Leaderboard
+  |
+  +-- Logout / Exit
+
+==================================================
+
+7. TOOLS USED
+
+- Java 26
+- Java Swing
+- MySQL
+- JDBC
+- IntelliJ IDEA
+- MySQL Workbench

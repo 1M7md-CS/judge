@@ -1,0 +1,80 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="VBoS1hFyZWHbCNYZYHUB">
+    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-6" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="&lt;u&gt;user_id&lt;/u&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="430" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-7" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="username" vertex="1">
+          <mxGeometry height="40" width="100" x="530" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-9" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="password_hash" vertex="1">
+          <mxGeometry height="40" width="100" x="630" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-10" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="score" vertex="1">
+          <mxGeometry height="40" width="100" x="730" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-11" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="role" vertex="1">
+          <mxGeometry height="40" width="100" x="830" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-12" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;text-decoration: underline;&quot;&gt;submission_id&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="430" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-13" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="code" vertex="1">
+          <mxGeometry height="40" width="100" x="530" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-14" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="language" vertex="1">
+          <mxGeometry height="40" width="100" x="630" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-15" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="submitted_at" vertex="1">
+          <mxGeometry height="40" width="100" x="730" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-16" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;font-family: monospace;&quot;&gt;verdict&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="830" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-19" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;text-decoration: underline;&quot;&gt;problem_id&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="430" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-20" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="title" vertex="1">
+          <mxGeometry height="40" width="100" x="530" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-23" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="points" vertex="1">
+          <mxGeometry height="40" width="100" x="630" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-31" edge="1" parent="1" source="Inhp9ADVrStyBwDlcjWq-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Inhp9ADVrStyBwDlcjWq-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980.03" y="280" />
+              <mxPoint x="480.03" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-25" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="&lt;u&gt;user_id&lt;/u&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="930" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-26" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;text-decoration: underline;&quot;&gt;problem_id&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="1030" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-27" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Submission" vertex="1">
+          <mxGeometry height="20" width="80" x="430" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-28" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="User" vertex="1">
+          <mxGeometry height="20" width="80" x="430" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-29" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Problem" vertex="1">
+          <mxGeometry height="20" width="80" x="430" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="Inhp9ADVrStyBwDlcjWq-30" edge="1" parent="1" source="Inhp9ADVrStyBwDlcjWq-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Inhp9ADVrStyBwDlcjWq-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080.03" y="540" />
+              <mxPoint x="480.03" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

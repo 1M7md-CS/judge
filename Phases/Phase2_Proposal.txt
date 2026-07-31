@@ -1,0 +1,105 @@
+PHASE 2 - PROJECT PROPOSAL (English)
+Deadline: Phase 2
+
+==================================================
+
+1. WHAT WAS DONE (Summary)
+
+In this phase the project code was started. The system now has a
+working GUI, a connection to the MySQL database, and simple
+CRUD operations.
+
+Implemented so far:
+- Login screen with database authentication
+- Admin Dashboard with user management
+- User Dashboard
+- Database connection using JDBC
+- Create / Read / Update / Delete users (Admin)
+- View problems and scores
+- Submit a Java solution and test it automatically
+
+==================================================
+
+2. SCREENS (Minimum 3 GUI Screens)
+
+1. Login Screen
+   - Username and password fields
+   - Show Password checkbox
+   - Validates login against the users table
+
+2. Admin Dashboard
+   - Add User
+   - Update User
+   - Remove User
+   - List of all users
+
+3. User Dashboard
+   - Welcome label
+   - Choose a problem
+   - Submit a Java solution
+   - Users scores list
+
+==================================================
+
+3. DATABASE CONNECTION
+
+- The system connects to MySQL using JDBC.
+- Database name: judge
+- Connected tables: users, problems, submissions
+- Login is checked against the users table
+  (password is stored as a SHA-256 hash)
+
+Database screenshots:
+- Put a screenshot of MySQL Workbench here showing the tables
+- Put a screenshot of the users table data here
+
+==================================================
+
+4. CRUD OPERATIONS
+
+Insert:
+- Admin can add a new user (username + password)
+
+View:
+- Admin can see all users in a list
+- User can see all users with their scores
+
+Update:
+- Admin can select a user and update username / password
+
+Delete:
+- Admin can remove a selected user
+
+==================================================
+
+5. PROBLEMS FACED
+
+- Setting up the MySQL database and JDBC driver
+- Connecting Swing GUI to the database
+- Password hashing with SHA-256
+- Making the admin and user screens communicate with the login
+  screen when closing windows
+- Testing the CRUD operations with the database
+
+==================================================
+
+6. CODE
+
+- Include the main source files here:
+  - LoginFrame.java
+  - AdminFrame.java
+  - UserFrame.java
+  - Database.java
+  - UserDAO.java
+  - Main.java
+
+==================================================
+
+7. TOOLS USED
+
+- Java 26
+- Java Swing
+- MySQL
+- JDBC
+- IntelliJ IDEA
+- MySQL Workbench

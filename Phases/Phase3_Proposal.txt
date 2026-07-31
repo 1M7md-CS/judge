@@ -1,0 +1,222 @@
+PHASE 3 - FINAL REPORT (English)
+Deadline: Final Version
+
+==================================================
+
+1. INTRODUCTION
+
+The Online Judge is a problem-solving platform that allows users to
+practice programming by solving predefined problems and submitting
+Java solutions. The system automatically compiles the submitted code,
+runs it against test cases, and gives an instant verdict.
+
+This is the final version of the project. It contains a complete
+GUI, a connected MySQL database, full CRUD operations, and an
+automatic grading system for solutions.
+
+==================================================
+
+2. PROJECT OBJECTIVES
+
+- Provide a login system for Users and Admins
+- Allow the Admin to manage users (Add, Update, Remove, View)
+- Provide programming problems to solve
+- Allow the user to submit a Java solution file
+- Compile and run the solution automatically
+- Grade the solution using test cases
+- Give instant feedback (Accepted, Wrong Answer, Runtime Error,
+  Compilation Error)
+- Track user scores and show a leaderboard
+
+==================================================
+
+3. MODULES EXPLANATION
+
+Module 1: Login Module
+- The user enters username and password
+- The password is hashed with SHA-256 and checked against the
+  users table
+- On success, the system opens Admin or User dashboard depending
+  on the role
+
+Module 2: Admin Module
+- View all users in a list
+- Add a new user
+- Update a selected user (username / password)
+- Remove a selected user
+- Logout / Exit
+
+Module 3: User Module
+- Shows the welcome message and the user's current score
+- Lists all problems as radio buttons
+- Submits a Java solution file through a file chooser
+- Compiles the file with javac
+- Runs the compiled class with the problem's test input
+- Compares the output with the expected output
+- Updates the score when the problem is solved for the first time
+- Shows the leaderboard of all users
+
+Module 4: Database Module
+- Connects to the MySQL database using JDBC
+- Contains the DAO classes (UserDAO, ProblemDAO, SubmissionDAO)
+  for all database operations
+
+==================================================
+
+4. ER DIAGRAM
+
+- Put the ER diagram image here (ERD.drawio can be used to create it)
+
+users 1 ---- N submissions N ---- 1 problems
+
+users:
+  user_id (PK)
+  username
+  password_hash
+  score
+  role
+
+problems:
+  problem_id (PK)
+  title
+  points
+
+submissions:
+  submission_id (PK)
+  code
+  language
+  submitted_at
+  verdict
+  user_id (FK -> users.user_id)
+  problem_id (FK -> problems.problem_id)
+
+==================================================
+
+5. DATABASE SCHEMA
+
+Database: judge
+
+Table: users
+  user_id INT AUTO_INCREMENT PRIMARY KEY
+  username VARCHAR(30) NOT NULL UNIQUE
+  password_hash VARCHAR(255) NOT NULL
+  score INT DEFAULT 0
+  role ENUM('USER', 'ADMIN') DEFAULT 'USER'
+
+Table: problems
+  problem_id INT AUTO_INCREMENT PRIMARY KEY
+  title VARCHAR(100) NOT NULL
+  points INT NOT NULL
+
+Table: submissions
+  submission_id INT AUTO_INCREMENT PRIMARY KEY
+  code LONGTEXT NOT NULL
+  language VARCHAR(30) NOT NULL
+  submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  verdict VARCHAR(30)
+  user_id INT NOT NULL (FK)
+  problem_id INT NOT NULL (FK)
+
+Sample data:
+- admin user (role ADMIN)
+- problems: Sum Two Numbers (1 point),
+  Sort Array (2 points), Reverse Array (1 point)
+
+==================================================
+
+6. SCREENSHOTS OF ALL SCREENS
+
+Put a screenshot of each screen here:
+
+1. Login screen
+2. Admin Dashboard
+3. User Dashboard
+4. Add / Update / Remove User dialogs
+5. File chooser for submitting a solution
+6. Accepted / Wrong Answer / Runtime Error dialogs
+7. MySQL Workbench (tables and data)
+
+==================================================
+
+7. TEST CASES
+
+Test 1: Login with correct username and password
+  Result: Login succeeds, correct dashboard opens
+
+Test 2: Login with wrong password
+  Result: "Invalid Login" message is shown
+
+Test 3: Add a new user with valid data
+  Result: User is added to the database and the list updates
+
+Test 4: Add a user with an existing username
+  Result: "Username already exists" message is shown
+
+Test 5: Update a selected user
+  Result: Username and password are updated in the database
+
+Test 6: Remove a selected user
+  Result: User is removed from the database and the list updates
+
+Test 7: Submit a correct solution
+  Result: Verdict "Accepted", user earns the problem points
+
+Test 8: Submit a solution with wrong output
+  Result: Verdict "Wrong Answer"
+
+Test 9: Submit a solution with a compilation error
+  Result: Verdict "Compilation Error"
+
+Test 10: Submit a solution that throws an exception at runtime
+  Result: Verdict "Runtime Error"
+
+Test 11: Submit the same problem again after solving it
+  Result: Accepted but no extra points are given
+
+Test 12: Logout
+  Result: Returns to the login screen
+
+==================================================
+
+8. FULL WORKING CRUD
+
+Create (Insert):
+- Admin adds a new user (INSERT INTO users)
+
+Read (View):
+- Admin and User see all users with scores (SELECT)
+- Problems are loaded from the database
+
+Update:
+- Admin updates username and password of a selected user
+- User score increases when solving a problem
+
+Delete:
+- Admin removes a selected user (DELETE FROM users)
+
+All CRUD operations are working with the MySQL database through
+the DAO classes.
+
+==================================================
+
+9. CONCLUSION
+
+The Online Judge project was completed successfully. It provides
+a complete system for practicing programming problems, with a
+user-friendly GUI, a secure login, full user management, and an
+automatic grading system. The system connects to a MySQL database
+and performs all required CRUD operations. All project objectives
+were achieved.
+
+==================================================
+
+10. SUGGESTIONS FOR FUTURE DEVELOPMENT
+
+- Add more problem types (multiple test cases per problem)
+- Add a timer for timed contests
+- Support more programming languages (C++, Python)
+- Add a problems editor for the Admin to add problems from the GUI
+- Show submission history for each user
+- Add search and filters to the leaderboard
+- Add a ranking / badges system
+- Make the interface responsive and resizeable
